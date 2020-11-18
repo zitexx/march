@@ -1,6 +1,7 @@
 body {
   font-size: 16px;
   font-size: 26px;
+  @extend %quicksand-500;
   color: $default;
 }
 

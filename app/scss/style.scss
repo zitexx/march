@@ -27,16 +27,19 @@
     text-transform: uppercase;
     padding-bottom: 1px;
     transition: all 0.3s;
+    @extend %quicksand-400;
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
+      @extend %quicksand-500;
     }
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom: 1px solid $accent;
+    @extend %quicksand-500;
   }
 }
 
