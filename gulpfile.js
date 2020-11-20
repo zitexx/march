@@ -23,6 +23,8 @@ function browsersync() {
   })
 }
 
+
+// Стили
 function styles() {
   return src('app/scss/style.scss') // через запятую можно указывать пути к файлам которые будут соединяться в один с помощью плагина concat
     .pipe(scss({
@@ -40,6 +42,7 @@ function styles() {
 // Для файлов JS
 function scripts() {
   return src(['node_modules/jquery/dist/jquery.js',
+      'node_modules/slick-carousel/slick/slick.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
