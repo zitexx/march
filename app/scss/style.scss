@@ -70,6 +70,77 @@
   }
 }
 
+.top {
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 120px 0 130px;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %roboto-400;
+  }
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/home-icon.svg');
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 4px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: #727272;
+    padding-right: 40px;
+    position: relative;
+
+    &::after {
+
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/angle-right.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 9px;
+      height: 10px;
+      right: 15px;
+      top: 9px;
+    }
+
+    &:last-child {
+      color: $accent;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+
+}
+
 .top-slider {
   background-image: url('../images/decor/top-slider-bg.png');
   background-repeat: no-repeat;
@@ -646,10 +717,66 @@
     margin-bottom: 20px;
   }
 
-  &__item-titlelink {}
-
-
 }
+
+.modal {
+  max-width: 570px;
+  margin: 0 auto 115px;
+  padding-top: 100px;
+
+  &__links {
+    text-align: center;
+    margin-bottom: 40px;
+
+  }
+
+  &__link {
+    @extend %roboto-400;
+    font-size: 22px;
+    color: #909090;
+    text-transform: uppercase;
+    margin: 0 30px;
+
+    &--active {
+      color: $accent;
+      font-weight: 700;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $bg;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
+
+  }
+
+  &__btn {
+    display: block;
+    background-color: $title;
+    text-transform: uppercase;
+    color: #fff;
+    @extend %roboto-400;
+    padding: 14px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+
+  &__lost {
+    color: $accent;
+  }
+}
+
 
 
 footer {
